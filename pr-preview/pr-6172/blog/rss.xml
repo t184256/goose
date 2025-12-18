@@ -16,7 +16,7 @@
             <description><![CDATA[goose ships early support for the draft MCP Apps specification, aligning with the emerging standard for interactive UIs in MCP.]]></description>
             <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="MCP Apps in goose" src="https://block.github.io/goose/pr-preview/pr-6172/assets/images/header-image-ecbc500b4fc5b46c40baccbd36672033.png" width="1376" height="768" class="img_ev3q"></p>
 <p>The MCP ecosystem is standardizing how servers deliver interactive UIs to hosts, and goose is an early adopter. Today we're shipping support for the draft MCP Apps specification (<a href="https://github.com/modelcontextprotocol/ext-apps/blob/main/specification/draft/apps.mdx" target="_blank" rel="noopener noreferrer" class="">SEP-1865</a>), bringing goose in line with the emerging standard as other hosts like Claude and ChatGPT move toward adoption.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-shipping">What's shipping<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps#whats-shipping" class="hash-link" aria-label="Direct link to What's shipping" title="Direct link to What's shipping" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-shipping">What's Shipping<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps#whats-shipping" class="hash-link" aria-label="Direct link to What's Shipping" title="Direct link to What's Shipping" translate="no">​</a></h2>
 <p>This release brings a minimal-but-functional implementation of MCP Apps:</p>
 <ul>
 <li class="">Discovery of MCP App resources connected to tools</li>
@@ -28,7 +28,7 @@
 <p>MCP Apps lets MCP servers present interactive HTML UIs (forms, dashboards, visualizations) directly inside a host like goose, Claude, or ChatGPT. Build once, run everywhere.</p>
 <p>It's a draft specification (<a href="https://github.com/modelcontextprotocol/modelcontextprotocol/pull/1865" target="_blank" rel="noopener noreferrer" class="">SEP-1865</a>) that builds on <a href="https://mcpui.dev/" target="_blank" rel="noopener noreferrer" class="">MCP-UI</a> and the <a href="https://developers.openai.com/apps-sdk/" target="_blank" rel="noopener noreferrer" class="">OpenAI Apps SDK</a>, led by <a href="https://x.com/idosal1" target="_blank" rel="noopener noreferrer" class="">Ido Salomon</a> and <a href="https://x.com/liadyosef" target="_blank" rel="noopener noreferrer" class="">Liad Yosef</a> with contributions from Anthropic and OpenAI.</p>
 <p>goose has been part of this from early on. We've <a class="" href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/08/11/mcp-ui-post-browser-world">shipped MCP-UI support</a>, participated in spec conversations, and are now implementing MCP Apps so extension authors have a real host to build against while the standard matures.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="this-is-experimental">This is experimental<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps#this-is-experimental" class="hash-link" aria-label="Direct link to This is experimental" title="Direct link to This is experimental" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="this-is-experimental">This is Experimental<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps#this-is-experimental" class="hash-link" aria-label="Direct link to This is Experimental" title="Direct link to This is Experimental" translate="no">​</a></h2>
 <p>MCP Apps is still a draft. Our implementation is intentionally minimal and subject to change. Expect sharp edges and breaking changes. We're shipping now so authors can try it, give feedback, and help the community converge on the right primitives.</p>
 <p><strong>What's not included yet:</strong></p>
 <ul>
@@ -36,13 +36,13 @@
 <li class="">Advanced capabilities (camera, sensors)</li>
 <li class="">Persistent app windows outside of conversations</li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-mcp-ui-transition">The MCP-UI transition<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps#the-mcp-ui-transition" class="hash-link" aria-label="Direct link to The MCP-UI transition" title="Direct link to The MCP-UI transition" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-mcp-ui-transition">The MCP-UI Transition<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps#the-mcp-ui-transition" class="hash-link" aria-label="Direct link to The MCP-UI Transition" title="Direct link to The MCP-UI Transition" translate="no">​</a></h2>
 <p>MCP-UI isn't going away overnight. We'll keep supporting it while the community finalizes MCP Apps, and there's an <a href="https://mcpui.dev/guide/mcp-apps" target="_blank" rel="noopener noreferrer" class="">adapter path</a> to ease migration. We'll share a deprecation timeline once the MCP Apps extension is formally accepted.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="try-it">Try it<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps#try-it" class="hash-link" aria-label="Direct link to Try it" title="Direct link to Try it" translate="no">​</a></h2>
 <ul>
 <li class=""><strong>Get started:</strong> Update goose and point it at an MCP server that returns App resources</li>
 <li class=""><strong>Read the spec:</strong> <a href="https://github.com/modelcontextprotocol/ext-apps" target="_blank" rel="noopener noreferrer" class="">github.com/modelcontextprotocol/ext-apps</a></li>
-<li class=""><strong>Join the conversation:</strong> <a href="https://github.com/block/goose/discussions/6069" target="_blank" rel="noopener noreferrer" class="">goose discussion</a> · <a href="https://discord.gg/CEAG4KW7ZH" target="_blank" rel="noopener noreferrer" class="">MCP-UI Discord</a></li>
+<li class=""><strong>Join the conversation:</strong> <a href="https://github.com/block/goose/discussions/6069" target="_blank" rel="noopener noreferrer" class="">GitHub discussion</a> · <a href="https://discord.gg/CEAG4KW7ZH" target="_blank" rel="noopener noreferrer" class="">MCP-UI Discord</a></li>
 </ul>
 <p>If you build or port an app, we want to hear from you. File issues, share demos, tell us what's broken. Early feedback shapes what comes next.</p>]]></content:encoded>
         </item>
