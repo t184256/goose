@@ -2,50 +2,49 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://block.github.io/goose/pr-preview/pr-6172/blog</id>
     <title>goose Blog</title>
-    <updated>2025-12-22T00:00:00.000Z</updated>
+    <updated>2025-12-19T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://block.github.io/goose/pr-preview/pr-6172/blog"/>
     <subtitle>goose Blog</subtitle>
     <icon>https://block.github.io/goose/pr-preview/pr-6172/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[goose Lands MCP Apps]]></title>
-        <id>https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps</id>
-        <link href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps"/>
-        <updated>2025-12-22T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[goose ships early support for the draft MCP Apps specification, aligning with the emerging standard for interactive UIs in MCP.]]></summary>
-        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="Retro 1980s hardware lab with three CRT monitors displaying &amp;quot;goose Lands MCP Apps&amp;quot; in glowing green text, with a small goose figurine on the desk" src="https://block.github.io/goose/pr-preview/pr-6172/assets/images/goose-lands-mcp-apps-header-image-eb1f899d6de24f21cc2c45e46727f11d.png" width="1376" height="768" class="img_ev3q"></p>
-<p>The MCP ecosystem is standardizing how servers deliver interactive UIs to hosts, and goose is an early adopter. Today we're shipping support for the draft MCP Apps specification (<a href="https://github.com/modelcontextprotocol/ext-apps/blob/main/specification/draft/apps.mdx" target="_blank" rel="noopener noreferrer" class="">SEP-1865</a>), bringing goose in line with the emerging standard as other hosts like Claude and ChatGPT move toward adoption.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-shipping">What's Shipping<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps#whats-shipping" class="hash-link" aria-label="Direct link to What's Shipping" title="Direct link to What's Shipping" translate="no">​</a></h2>
-<p>This release brings a minimal-but-functional implementation of MCP Apps:</p>
+        <title type="html"><![CDATA[goose Mobile Access and Native Terminal Support]]></title>
+        <id>https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/19/goose-mobile-terminal</id>
+        <link href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/19/goose-mobile-terminal"/>
+        <updated>2025-12-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Two new ways to use goose]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="goose on iOS - access your personal desktop agent from anywhere" src="https://block.github.io/goose/pr-preview/pr-6172/assets/images/mobile_shots-a1231226854fb0aff4d230dd64291077.png" width="1598" height="1086" class="img_ev3q"></p>
+<p>We're excited to announce two new ways to interact with goose: a <a href="https://apps.apple.com/app/goose-ai/id6752889295">native iOS app</a> for mobile access and native terminal integration. Both give you more flexibility in how and where you use your AI agent.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="goose-ios-app">goose iOS App<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/19/goose-mobile-terminal#goose-ios-app" class="hash-link" aria-label="Direct link to goose iOS App" title="Direct link to goose iOS App" translate="no">​</a></h2>
+<p>goose is now available on the App Store! The iOS app connects to your desktop goose instance via a secure tunnel, letting you interact with your agent from anywhere.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="getting-started-with-mobile">Getting Started with Mobile<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/19/goose-mobile-terminal#getting-started-with-mobile" class="hash-link" aria-label="Direct link to Getting Started with Mobile" title="Direct link to Getting Started with Mobile" translate="no">​</a></h3>
+<ol>
+<li class=""><strong>Install the app</strong> - Download <a href="https://apps.apple.com/app/goose-ai/id6752889295" target="_blank" rel="noopener noreferrer" class="">goose from the App Store</a></li>
+<li class=""><strong>Enable remote access</strong> - In the goose desktop app, go to App Settings and turn on "Remote Access"</li>
+<li class=""><strong>Scan the QR code</strong> - Use the iOS app to scan the QR code displayed in your desktop app</li>
+<li class=""><strong>Start working</strong> - You're connected! Your mobile app now tunnels to your goose desktop instance</li>
+</ol>
+<p>See the <a class="" href="https://block.github.io/goose/pr-preview/pr-6172/docs/experimental/mobile-access">Mobile Access guide</a> for detailed steps.</p>
+<p>This means you get the full power of your desktop goose setup—all your extensions and configurations—accessible from your phone. Whether you're on the train, grabbing coffee, or just away from your desk, you can still ask goose to help with tasks or check on long-running things. Throw an idea out there for it to go to work on and pick it up later.</p>
+<p>The goose iOS app also runs natively on macOS (Apple Silicon Macs), giving you another lightweight option for accessing your goose instance from another device.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="native-terminal-support">Native Terminal Support<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/19/goose-mobile-terminal#native-terminal-support" class="hash-link" aria-label="Direct link to Native Terminal Support" title="Direct link to Native Terminal Support" translate="no">​</a></h2>
+<p>At the other end of things, there is a brand new way to use goose natively in your favoured terminal.
+No need to switch to another terminal or app or TUI, you can use goose right where you are in your terminal.
+See the <a class="" href="https://block.github.io/goose/pr-preview/pr-6172/docs/guides/terminal-integration">Terminal Integration guide</a> for a guide on how to set it up.</p>
+<p>Once set up, you can call <code>@goose</code> from anywhere in your terminal. It automatically manages sessions for you and keeps context with what you've been working on—even when goose isn't running. When you ask it something, it jumps right in and helps with full awareness of your recent work.</p>
+<p><img decoding="async" loading="lazy" alt="Native terminal integration with @goose" src="https://block.github.io/goose/pr-preview/pr-6172/assets/images/shell-5f869cdbbfb345b7836486dbb45a1804.png" width="1238" height="584" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="use-goose-your-way">Use Goose Your Way<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/19/goose-mobile-terminal#use-goose-your-way" class="hash-link" aria-label="Direct link to Use Goose Your Way" title="Direct link to Use Goose Your Way" translate="no">​</a></h2>
+<p>These two new modes—mobile and native terminal—work together with the desktop app to give you seamless access to goose however you prefer to work.
+A session in goose from native terminal, cli, desktop, IDE and now mobile are all the same set of sessions which can now be accessed from anywhere.</p>
 <ul>
-<li class="">Discovery of MCP App resources connected to tools</li>
-<li class="">HTML content rendering in sandboxed iframes</li>
-<li class="">Basic message relay between the UI and the MCP server</li>
+<li class=""><strong>Mobile</strong> lets you access your goose sessions and tasks from anywhere, any time. Start something on your desktop, check in from your phone, pick it back up later.</li>
+<li class=""><strong>Terminal</strong> integration means goose is always just a <code>@goose</code> away while you're working in the shell—no context switching needed.</li>
 </ul>
-<p>Extension authors can now build MCP Apps that work across goose and any host that adopts the standard.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-mcp-apps">What is MCP Apps?<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps#what-is-mcp-apps" class="hash-link" aria-label="Direct link to What is MCP Apps?" title="Direct link to What is MCP Apps?" translate="no">​</a></h2>
-<p>MCP Apps lets MCP servers present interactive HTML UIs (forms, dashboards, visualizations) directly inside a host. Build once, run everywhere.</p>
-<p>It's a draft specification (<a href="https://github.com/modelcontextprotocol/modelcontextprotocol/pull/1865" target="_blank" rel="noopener noreferrer" class="">SEP-1865</a>) that builds on <a href="https://mcpui.dev/" target="_blank" rel="noopener noreferrer" class="">MCP-UI</a> and the <a href="https://developers.openai.com/apps-sdk/" target="_blank" rel="noopener noreferrer" class="">OpenAI Apps SDK</a>, led by <a href="https://x.com/idosal1" target="_blank" rel="noopener noreferrer" class="">Ido Salomon</a> and <a href="https://x.com/liadyosef" target="_blank" rel="noopener noreferrer" class="">Liad Yosef</a> with contributions from Anthropic and OpenAI.</p>
-<p>goose has been part of this from early on. We've <a class="" href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/08/11/mcp-ui-post-browser-world">shipped MCP-UI support</a>, participated in spec conversations, and are now implementing MCP Apps so extension authors have a real host to build against while the standard matures.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="this-is-experimental">This is Experimental<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps#this-is-experimental" class="hash-link" aria-label="Direct link to This is Experimental" title="Direct link to This is Experimental" translate="no">​</a></h2>
-<p>MCP Apps is still a draft. Our implementation is intentionally minimal and subject to change. Expect sharp edges and breaking changes. We're shipping now so authors can try it, give feedback, and help the community converge on the right primitives.</p>
-<p><strong>What's not included yet:</strong></p>
-<ul>
-<li class="">Full parity with every feature in the draft spec</li>
-<li class="">Advanced capabilities (camera, sensors)</li>
-<li class="">Persistent app windows outside of conversations</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-mcp-ui-transition">The MCP-UI Transition<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps#the-mcp-ui-transition" class="hash-link" aria-label="Direct link to The MCP-UI Transition" title="Direct link to The MCP-UI Transition" translate="no">​</a></h2>
-<p>MCP-UI isn't going away overnight. We'll keep supporting it while the community finalizes MCP Apps, and there's an <a href="https://mcpui.dev/guide/mcp-apps" target="_blank" rel="noopener noreferrer" class="">adapter path</a> to ease migration. We'll share a deprecation timeline once the MCP Apps extension is formally accepted.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="try-it">Try it<a href="https://block.github.io/goose/pr-preview/pr-6172/blog/2025/12/22/mcp-apps#try-it" class="hash-link" aria-label="Direct link to Try it" title="Direct link to Try it" translate="no">​</a></h2>
-<ul>
-<li class=""><strong>Get started:</strong> Update goose and point it at an MCP server that returns App resources</li>
-<li class=""><strong>Read the spec:</strong> <a href="https://github.com/modelcontextprotocol/ext-apps" target="_blank" rel="noopener noreferrer" class="">github.com/modelcontextprotocol/ext-apps</a></li>
-<li class=""><strong>Join the conversation:</strong> <a href="https://github.com/block/goose/discussions/6069" target="_blank" rel="noopener noreferrer" class="">GitHub discussion</a> · <a href="https://discord.gg/CEAG4KW7ZH" target="_blank" rel="noopener noreferrer" class="">MCP-UI Discord</a></li>
-</ul>
-<p>If you build or port an app, we want to hear from you. File issues, share demos, tell us what's broken. Early feedback shapes what comes next.</p>]]></content>
+<p>It doesn't matter how you use goose. Your sessions are yours, and you can use and re-use them from anywhere: desktop, terminal, or mobile (and all on your machine).</p>
+<p>Try them out and let us know what you think in our <a href="https://discord.gg/goose-oss" target="_blank" rel="noopener noreferrer" class="">Discord</a>!</p>
+]]></content>
         <author>
-            <name>Andrew Harvard</name>
+            <name>Michael Neale</name>
         </author>
     </entry>
     <entry>
