@@ -938,6 +938,7 @@ fn configure_streamable_http_extension() -> anyhow::Result<()> {
 
     let timeout = prompt_extension_timeout()?;
     let description = prompt_extension_description()?;
+    let (envs, env_keys) = collect_env_vars()?;
     let headers = collect_headers()?;
 
     set_extension(ExtensionEntry {
@@ -945,8 +946,8 @@ fn configure_streamable_http_extension() -> anyhow::Result<()> {
         config: ExtensionConfig::StreamableHttp {
             name: name.clone(),
             uri,
-            envs: Envs::new(HashMap::new()),
-            env_keys: Vec::new(),
+            envs: Envs::new(envs),
+            env_keys,
             headers,
             description,
             timeout: Some(timeout),
