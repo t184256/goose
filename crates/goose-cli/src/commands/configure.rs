@@ -938,8 +938,11 @@ fn configure_streamable_http_extension() -> anyhow::Result<()> {
 
     let timeout = prompt_extension_timeout()?;
     let description = prompt_extension_description()?;
-    let (envs, env_keys) = collect_env_vars()?;
     let headers = collect_headers()?;
+
+    // Original behavior: no env var collection for Streamable HTTP
+    let envs = HashMap::new();
+    let env_keys = Vec::new();
 
     set_extension(ExtensionEntry {
         enabled: true,
