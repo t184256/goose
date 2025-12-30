@@ -63,9 +63,12 @@
             dbus         # Required for system integration features
           ] ++ pkgs.lib.optionals pkgs.stdenv.isDarwin darwinInputs;
 
-          # Build only the CLI package
-          cargoBuildFlags = [ "--package" "goose-cli" ];
-          
+          # Build only the CLI package and the daemon
+          cargoBuildFlags = [
+            "--bin" "goose"
+            "--bin" "goosed"
+          ];
+
           # Enable tests with proper environment
           # Tests need writable HOME and XDG directories for config/cache access
           doCheck = true;
@@ -76,7 +79,7 @@
             export XDG_STATE_HOME=$HOME/.local/state
             export XDG_CACHE_HOME=$HOME/.cache
             mkdir -p $XDG_CONFIG_HOME $XDG_DATA_HOME $XDG_STATE_HOME $XDG_CACHE_HOME
-            
+
             # Run tests for goose-cli package only
             cargo test --package goose-cli --release
           '';
