@@ -91,9 +91,12 @@
             dbus         # Required for system integration features
           ] ++ pkgs.lib.optionals pkgs.stdenv.isDarwin darwinInputs;
 
-          # Build only the CLI package
-          cargoBuildFlags = [ "--package" "goose-cli" ];
-          
+          # Build only the CLI package and the daemon
+          cargoBuildFlags = [
+            "--bin" "goose"
+            "--bin" "goosed"
+          ];
+
           # Enable tests with proper environment
           # Tests need writable HOME and XDG directories for config/cache access
           doCheck = true;
