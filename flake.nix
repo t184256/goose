@@ -42,7 +42,17 @@
           version = workspaceToml.workspace.package.version;
           src = self;
 
-          cargoLock.lockFile = ./Cargo.lock;
+          cargoLock = {
+            lockFile = ./Cargo.lock;
+            outputHashes = {
+              "opentelemetry-0.31.0" =
+                "sha256-WmrsJUT+hhY9A0YrDMPCB+U23ZPNyX6eZlZ4VYlLk5Y=";
+              "sacp-11.0.0" =
+                "sha256-dcjr32HbUUBPDSMhz+xMBmfXEd3vImT+KVeKXfjXaOU=";
+              "sacp-derive-11.0.0" =
+                "sha256-dcjr32HbUUBPDSMhz+xMBmfXEd3vImT+KVeKXfjXaOU=";
+            };
+          };
 
           LIBCLANG_PATH = "${pkgs.libclang.lib}/lib";
 
