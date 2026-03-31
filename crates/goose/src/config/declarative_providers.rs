@@ -435,6 +435,21 @@ fn resolve_config(config: &mut DeclarativeProviderConfig) -> Result<()> {
     Ok(())
 }
 
+fn apply_model_info_params(
+    model: crate::model::ModelConfig,
+    cfg: &DeclarativeProviderConfig,
+) -> crate::model::ModelConfig {
+    if model.request_params.is_some() {
+        return model;
+    }
+    if let Some(info) = cfg.models.iter().find(|m| m.name == model.model_name) {
+        if let Some(params) = &info.request_params {
+            return model.with_request_params(Some(params.clone()));
+        }
+    }
+    model
+}
+
 pub fn register_declarative_provider(
     registry: &mut crate::providers::provider_registry::ProviderRegistry,
     config: DeclarativeProviderConfig,
@@ -453,6 +468,7 @@ pub fn register_declarative_provider(
                 move |model| {
                     let mut cfg = captured.clone();
                     resolve_config(&mut cfg)?;
+                    let model = apply_model_info_params(model, &cfg);
                     OpenAiProvider::from_custom_config(model, cfg)
                 },
             );
@@ -465,6 +481,7 @@ pub fn register_declarative_provider(
                 move |model| {
                     let mut cfg = captured.clone();
                     resolve_config(&mut cfg)?;
+                    let model = apply_model_info_params(model, &cfg);
                     OllamaProvider::from_custom_config(model, cfg)
                 },
             );
@@ -477,6 +494,7 @@ pub fn register_declarative_provider(
                 move |model| {
                     let mut cfg = captured.clone();
                     resolve_config(&mut cfg)?;
+                    let model = apply_model_info_params(model, &cfg);
                     AnthropicProvider::from_custom_config(model, cfg)
                 },
             );

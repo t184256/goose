@@ -3,6 +3,8 @@ use async_trait::async_trait;
 use futures::future::BoxFuture;
 use futures::Stream;
 use serde::{Deserialize, Serialize};
+use serde_json::Value;
+use std::collections::HashMap;
 
 use super::canonical::{map_to_canonical_model, CanonicalModelRegistry};
 use super::errors::ProviderError;
@@ -118,6 +120,9 @@ pub struct ModelInfo {
     pub currency: Option<String>,
     /// Whether this model supports cache control
     pub supports_cache_control: Option<bool>,
+    /// Provider-specific request parameters to merge into API requests
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub request_params: Option<HashMap<String, Value>>,
 }
 
 impl ModelInfo {
@@ -130,6 +135,7 @@ impl ModelInfo {
             output_token_cost: None,
             currency: None,
             supports_cache_control: None,
+            request_params: None,
         }
     }
 
@@ -147,6 +153,7 @@ impl ModelInfo {
             output_token_cost: Some(output_cost),
             currency: Some("$".to_string()),
             supports_cache_control: None,
+            request_params: None,
         }
     }
 }
@@ -207,6 +214,7 @@ impl ProviderMetadata {
                     output_token_cost: None,
                     currency: None,
                     supports_cache_control: None,
+                    request_params: None,
                 })
                 .collect(),
             model_doc_link: model_doc_link.to_string(),
@@ -1107,6 +1115,7 @@ mod tests {
             output_token_cost: None,
             currency: None,
             supports_cache_control: None,
+            request_params: None,
         };
         assert_eq!(info.context_limit, 1000);
 
@@ -1118,6 +1127,7 @@ mod tests {
             output_token_cost: None,
             currency: None,
             supports_cache_control: None,
+            request_params: None,
         };
         assert_eq!(info, info2);
 
@@ -1129,6 +1139,7 @@ mod tests {
             output_token_cost: None,
             currency: None,
             supports_cache_control: None,
+            request_params: None,
         };
         assert_ne!(info, info3);
     }
